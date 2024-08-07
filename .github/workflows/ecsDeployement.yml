@@ -62,10 +62,10 @@ jobs:
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: us-east-1
 
-    - name: Register ECS Task Definition 
+    - name: Register ECS Task Definition
       run: |
-        aws ecs register-task-definition \
-          --cli-input-json=file://greps.json
+        aws ecs register-task-definition --cli-input-json file://greps.json
+
 
     - name: Update ECS Service
       run: |
