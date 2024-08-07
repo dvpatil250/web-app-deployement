@@ -4,7 +4,9 @@
         {
             "name": "papaya",
             "image": "022499010637.dkr.ecr.us-east-1.amazonaws.com/apple:latest",
-            "cpu": 1,
+            "cpu": 256,
+            "memory": 512,
+            "essential": true,
             "portMappings": [
                 {
                     "containerPort": 80,
@@ -12,7 +14,6 @@
                     "protocol": "tcp"
                 }
             ],
-            "essential": true,
             "logConfiguration": {
                 "logDriver": "awslogs",
                 "options": {
