@@ -1,10 +1,12 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:us-east-1:022499010637:task-definition/web-app-task-defintion:5",
+    "taskDefinitionArn": "arn:aws:ecs:us-east-1:022499010637:task-definition/web-app-task-defintion:9",
     "containerDefinitions": [
         {
             "name": "web-app",
             "image": "022499010637.dkr.ecr.us-east-1.amazonaws.com/web-app",
             "cpu": 1024,
+            "memory": 1024,
+            "memoryReservation": 1024,
             "portMappings": [
                 {
                     "name": "web-app-80-tcp",
@@ -37,7 +39,7 @@
     "taskRoleArn": "arn:aws:iam::022499010637:role/ecr-access-for-ecs",
     "executionRoleArn": "arn:aws:iam::022499010637:role/ecr-access-for-ecs",
     "networkMode": "awsvpc",
-    "revision": 5,
+    "revision": 9,
     "volumes": [],
     "status": "ACTIVE",
     "requiresAttributes": [
@@ -54,10 +56,16 @@
             "name": "com.amazonaws.ecs.capability.docker-remote-api.1.19"
         },
         {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.21"
+        },
+        {
             "name": "com.amazonaws.ecs.capability.task-iam-role"
         },
         {
             "name": "ecs.capability.execution-role-ecr-pull"
+        },
+        {
+            "name": "ecs.capability.extensible-ephemeral-storage"
         },
         {
             "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
@@ -79,11 +87,14 @@
     ],
     "cpu": "1024",
     "memory": "3072",
+    "ephemeralStorage": {
+        "sizeInGiB": 200
+    },
     "runtimePlatform": {
         "cpuArchitecture": "X86_64",
         "operatingSystemFamily": "LINUX"
     },
-    "registeredAt": "2024-08-07T11:16:53.559Z",
+    "registeredAt": "2024-08-07T11:53:37.816Z",
     "registeredBy": "arn:aws:iam::022499010637:root",
     "tags": []
 }
