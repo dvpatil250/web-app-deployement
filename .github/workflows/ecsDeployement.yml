@@ -65,7 +65,7 @@ jobs:
     - name: Register ECS Task Definition 
       run: |
         aws ecs register-task-definition \
-          --cli-input-json file://greps.json
+          --cli-input-json=file://greps.json
 
     - name: Update ECS Service
       run: |
