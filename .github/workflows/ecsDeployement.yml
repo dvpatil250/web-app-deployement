@@ -42,7 +42,7 @@ jobs:
       run: |
         docker buildx build \
           --file Dockerfile \
-          --tag 022499010637.dkr.ecr.us-east-1.amazonaws.com/web-app:latest \
+          --tag 022499010637.dkr.ecr.us-east-1.amazonaws.com/apple \
           --push \
           .
 
