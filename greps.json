@@ -4,7 +4,7 @@
         {
             "name": "papaya",
             "image": "022499010637.dkr.ecr.us-east-1.amazonaws.com/apple:latest",
-            "cpu": 0,
+            "cpu": 1,
             "portMappings": [
                 {
                     "containerPort": 80,
