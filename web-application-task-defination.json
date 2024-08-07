@@ -1,9 +1,4 @@
-aws ecs register-task-definition \
-  --family web-application-task-definition \
-  --task-role-arn arn:aws:iam::022499010637:role/ecr-access-for-ecs \
-  --execution-role-arn arn:aws:iam::022499010637:role/ecr-access-for-ecs \
-  --network-mode awsvpc \
-  --container-definitions '[{
+[{
     "name": "web-app",
     "image": "022499010637.dkr.ecr.us-east-1.amazonaws.com/web-app",
     "cpu": 0,
@@ -22,8 +17,4 @@ aws ecs register-task-definition \
         "awslogs-stream-prefix": "ecs"
       }
     }
-  }] \
-  --cpu "512" \
-  --memory "1024" \
-  --requires-compatibilities FARGATE \
-  --runtime-platform cpuArchitecture=X86_64,operatingSystemFamily=LINUX
+  }]
