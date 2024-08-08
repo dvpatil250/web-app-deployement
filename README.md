@@ -18,34 +18,6 @@ Rollback
 
 Additional Notes
 
-## Table of Contents
-
-Prerequisites
-
-Setup
-
-Usage
-
-Testing
-
-Rollback
-
-Additional Notes
-
-## Table of Contents
-
-Prerequisites
-
-Setup
-
-Usage
-
-Testing
-
-Rollback
-
-Additional Notes
-
 ## Prerequisites
 1.GitHub Repository: A GitHub repository containing your web application code.
 
